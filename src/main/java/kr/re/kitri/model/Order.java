@@ -1,23 +1,25 @@
 package kr.re.kitri.model;
 
+import java.time.LocalDate;
+
 /**
  * Created by danawacomputer on 2017-05-11.
  */
 public class Order {
 
     // 필드
-    private String custID;
+    private int custID;
     private String username;
     private String address;
     private String email;
-    private String orderDate;
+    private LocalDate orderDate;
     private String productName;
 
     // 생성자
     public Order() {
     }
 
-    public Order(String custID, String username, String address, String email, String orderDate, String productName) {
+    public Order(int custID, String username, String address, String email, LocalDate orderDate, String productName) {
         this.custID = custID;
         this.username = username;
         this.address = address;
@@ -27,10 +29,10 @@ public class Order {
     }
 
     // 메소드
-    public String getCustID() {
+    public int getCustID() {
         return custID;
     }
-    public void setCustID(String custID) {
+    public void setCustID(int custID) {
         this.custID = custID;
     }
 
@@ -55,10 +57,10 @@ public class Order {
         this.email = email;
     }
 
-    public String getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
-    public void setOrderDate(String orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 

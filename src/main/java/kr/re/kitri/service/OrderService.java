@@ -56,8 +56,13 @@ public class OrderService {
 
         while (rs.next()) {
 
-            list.add(new Order(rs.getString(1), rs.getString(2), rs.getString(3),
-                    rs.getString(4), rs.getString(5), rs.getString(6)));
+            list.add(new Order(
+                    rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    rs.getTimestamp(5).toLocalDateTime().toLocalDate(),
+                    rs.getString(6)));
         }
     }
 

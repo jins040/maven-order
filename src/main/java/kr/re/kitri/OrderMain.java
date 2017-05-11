@@ -18,9 +18,7 @@ public class OrderMain {
         List<Order> list = service.getOrderList();
 
         if (list.size() > 0) {
-            for (Order e : list) {
-                System.out.println(e);
-            }
+            list.forEach(System.out::println);
         } else {
             System.out.println("No Data..");
         }
